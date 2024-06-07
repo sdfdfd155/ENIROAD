@@ -1,174 +1,20 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>에니로드 - 길안내 경로</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #6a0dad; 
-            padding: 20px;
-            text-align: center;
-            position: relative;
-        }
-        header img {
-            height: 50px;
-        }
-        main {
-            padding: 20px;
-            background-color: #fff;
-            margin: 20px auto;
-            max-width: 800px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .controls {
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-        .controls label {
-            margin-right: 10px;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .controls input {
-            margin-right: 10px;
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .controls button {
-            padding: 10px 20px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            cursor: pointer;
-            background-color: #6a0dad;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .map-container {
-            width: 100%;
-            height: 500px;
-            margin-bottom: 20px;
-        }
-        .results-container {
-            display: flex;
-            justify-content: space-between;
-        }
-        .results-container div {
-            width: 32%;
-            background-color: #f9f9f9;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        }
-        .large-text {
-            font-size: 24px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #6a0dad; 
-            color: white;
-        }
-    </style>
-    <script type="text/javascript" src="test.js"></script>
+	<meta charset="utf-8"/>
+	<title>Kakao 지도 시작하기</title>
 </head>
 <body>
-    <header>
-        <img src="/mnt/data/Group_626592.png" alt="에니로드 로고"> #로고 이미지 첨부?
-    </header>
-    <main>
-        <div class="controls">
-            <label for="start">출발지:</label>
-            <input type="text" id="start" name="start">
-            <label for="end">목적지:</label>
-            <input type="text" id="end" name="end">
-            <button onclick="findRoute()">결과 찾기</button>
-            <button onclick="toggleTextSize()">글씨 크기 확대/축소</button>
-            <button onclick="location.href='guide.html'">사용 방법</button>
-        </div>
-        <div id="map" class="map-container"></div>
-        <div class="results-container">
-            <div id="subway-result">지하철 경로</div>
-            <div id="car-result">자가용 경로</div>
-            <div id="bus-result">버스 경로</div>
-        </div>
-    </main>
-    <footer>
-        &copy; 2024 에니로드
-    </footer>
-    <script>
-        #지도
-        var mapContainer = document.getElementById('map'), 
-            mapOption = { 
-                center: new kakao.maps.LatLng(37.566826, 126.9786567), // 서울 중심 좌표에요
-                level: 3 // 지도의 확대 레벨
-            };
+	<div id="map" style="width:500px;height:400px;"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c6dcc0c6916ba71802e3393158bab1bd"></script>
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
 
-       #지도 생성
-        var map = new kakao.maps.Map(mapContainer, mapOption); 
-
-       # 지도 교통정보? 어렵네요
-        map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
-
-        #확대/축소
-        function toggleTextSize() {
-            document.body.classList.toggle('large-text');
-        }
-
-        #경로 검색..
-        function findRoute() {
-            var start = document.getElementById('start').value;
-            var end = document.getElementById('end').value;
-            
-            #경로
-            var apiUrl = `https://api.kakaomap.com/v2/directions?origin=${start}&destination=${end}`;
-            
-            fetch(apiUrl)
-                .then(function(response) {
-                    return response.json();
-                })
-                .then(function(data) {
-                    
-                    displayResults(data);
-                })
-                .catch(function(error) {
-                    console.error('Error:', error);
-                });
-        }
-
-        #경로 결과표시 함수
-        function displayResults(data) {
-            var subwayResult = '지하철 경로: ' + data.subway;
-            var carResult = '자가용 경로: ' + data.car;
-            var busResult = '버스 경로: ' + data.bus;
-
-            document.getElementById('subway-result').innerText = subwayResult;
-            document.getElementById('car-result').innerText = carResult;
-            document.getElementById('bus-result').innerText = busResult;
-        }
-        
-        #페이지 로드 시 지도초기화
-        window.onload = function() {
-            initMap();
-        }
-
-       #지도 초기화
-        function initMap() {
-        }
-    </script>
+		var map = new kakao.maps.Map(container, options);
+	</script>
 </body>
 </html>
