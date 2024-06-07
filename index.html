@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,8 +97,10 @@
             color: white;
         }
     </style>
-    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=c6dcc0c6916ba71802e3393158bab1bd&libraries=services"></script>
+    <script type="text/javascript"
+        src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=c6dcc0c6916ba71802e3393158bab1bd&libraries=services"></script>
 </head>
+
 <body>
     <header>
         <img src="/mnt/data/Group_626592.png" alt="에니로드 로고">
@@ -128,34 +131,42 @@
 
         // HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
         if (navigator.geolocation) {
-    
-    // GeoLocation을 이용해서 접속 위치를 얻어옵니다
-        navigator.geolocation.getCurrentPosition(function(position) {
-        
-        var lat = position.coords.latitude, // 위도
-            lon = position.coords.longitude; // 경도
-        
-        var locPosition = new kakao.maps.LatLng(lat, lon) // geolocation으로 얻어온 좌표
-        presentPosition=locPosition;
- 
-        map.setCenter(locPosition);   
-            
-          });
-    
-} else { // HTML5의 GeoLocation을 사용할 수 없을때 
-    
-    var locPosition = new kakao.maps.LatLng(37.566826, 126.9786567)
-    alert('현재 위치를 찾을 수 없습니다!');
-}
+
+            // GeoLocation을 이용해서 접속 위치를 얻어옵니다
+            navigator.geolocation.getCurrentPosition(function (position) {
+
+                var lat = position.coords.latitude, // 위도
+                    lon = position.coords.longitude; // 경도
+
+                var locPosition = new kakao.maps.LatLng(lat, lon) // geolocation으로 얻어온 좌표
+                presentPosition = locPosition;
+
+                map.setCenter(locPosition);
+
+            }, function (error) {
+                console.error(error);
+            }, {
+                enableHighAccuracy: true, // 높은 정확도 요청
+                timeout: 5000, // 5초 내에 위치 정보를 가져오지 못하면 에러 발생
+                maximumAge: 0 // 캐시된 위치 정보를 사용하지 않음
+            });
+
+
+
+        } else { // HTML5의 GeoLocation을 사용할 수 없을때 
+
+            var locPosition = new kakao.maps.LatLng(37.566826, 126.9786567)
+            alert('현재 위치를 찾을 수 없습니다!');
+        }
 
         var geocoder = new kakao.maps.services.Geocoder();
         var marker = new kakao.maps.Marker();
-        var infowindow = new kakao.maps.InfoWindow({zindex:1});
+        var infowindow = new kakao.maps.InfoWindow({ zindex: 1 });
         var startAddr = "";
         var endAddr = "";
 
-        kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
-            searchDetailAddrFromCoords(mouseEvent.latLng, function(result, status) {
+        kakao.maps.event.addListener(map, 'click', function (mouseEvent) {
+            searchDetailAddrFromCoords(mouseEvent.latLng, function (result, status) {
                 if (status === kakao.maps.services.Status.OK) {
                     var detailAddr = !!result[0].road_address ? result[0].road_address.address_name : result[0].address.address_name;
                     if (!startAddr) {
@@ -169,15 +180,15 @@
                     }
 
                     var content = '<div class="bAddr">' +
-                                    '<span class="title">법정동 주소정보</span>' + 
-                                    '<div>' + detailAddr + '</div>' +
-                                '</div>';
+                        '<span class="title">법정동 주소정보</span>' +
+                        '<div>' + detailAddr + '</div>' +
+                        '</div>';
 
                     marker.setPosition(mouseEvent.latLng);
                     marker.setMap(map);
                     infowindow.setContent(content);
                     infowindow.open(map, marker);
-                }   
+                }
             });
         });
 
@@ -202,4 +213,5 @@
         }
     </script>
 </body>
+
 </html>
