@@ -105,9 +105,9 @@
     <main>
         <div class="controls">
             <label for="start">출발지:</label>
-            <input type="text" id="start" name="start" readonly>
+            <input type="text" id="start" name="start">
             <label for="end">목적지:</label>
-            <input type="text" id="end" name="end" readonly>
+            <input type="text" id="end" name="end">
             <button id="routeButton" onclick="openRoute()">경로 보기</button>
             <button onclick="toggleTextSize()">글씨 크기 확대/축소</button>
             <button onclick="location.href='guide.html'">사용 방법</button>
@@ -164,11 +164,14 @@
         }
 
         function openRoute() {
-            if (startAddr && endAddr) {
-                var routeLink = `https://map.kakao.com/?sName=${encodeURIComponent(startAddr)}&eName=${encodeURIComponent(endAddr)}`;
+            var start = document.getElementById('start').value;
+            var end = document.getElementById('end').value;
+
+            if (start && end) {
+                var routeLink = `https://map.kakao.com/?sName=${encodeURIComponent(start)}&eName=${encodeURIComponent(end)}`;
                 window.open(routeLink, '_blank');
             } else {
-                alert("출발지와 목적지를 설정해주세요.");
+                alert("출발지와 목적지를 입력하거나 설정해주세요.");
             }
         }
 
