@@ -1,255 +1,255 @@
 .f5-icon {
-	position: absolute;
-	height: 19.03%;
-	width: 14.88%;
-	top: 45.05%;
-	right: 74.42%;
-	bottom: 35.92%;
-	left: 10.7%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: cover;
-}
-.map-icon {
-	position: absolute;
-	height: 50.46%;
-	width: 27.69%;
-	top: 35.56%;
-	right: 5.13%;
-	bottom: 13.98%;
-	left: 67.18%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: cover;
+    position: absolute;
+    height: 18%;
+    width: 14.88%;
+    top: 45.05%;
+    right: 74.42%;
+    bottom: 35.92%;
+    left: 10.7%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
 }
 .btext-box-icon {
-	position: absolute;
-	height: 98.5%;
-	width: 100%;
-	top: 0%;
-	right: 0%;
-	bottom: 1.5%;
-	left: 0%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: cover;
+    position: absolute;
+    height: 97%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 1.5%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
 }
 .btext-text-icon {
-	position: absolute;
-	height: 93.73%;
-	width: 73.21%;
-	top: 6.26%;
-	right: 12.65%;
-	bottom: 0.01%;
-	left: 14.14%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: cover;
+    position: absolute;
+    height: 93.73%;
+    width: 73.21%;
+    top: 6.26%;
+    right: 12.65%;
+    bottom: 0.01%;
+    left: 14.14%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
 }
 .btext {
-	position: absolute;
-	height: 14.19%;
-	width: 27.82%;
-	top: 13.22%;
-	right: 5%;
-	bottom: 72.6%;
-	left: 67.18%;
+    position: absolute;
+    height: 14.19%;
+    width: 27.82%;
+    top: 13.22%;
+    right: 5%;
+    bottom: 72.6%;
+    left: 67.18%;
 }
 .useguide-box-icon {
-	position: absolute;
-	height: 98.82%;
-	width: 100%;
-	top: 0%;
-	right: 0%;
-	bottom: 1.18%;
-	left: 0%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: cover;
+    position: absolute;
+    height: 98.82%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 1.18%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
 }
 .useguide-text-icon {
-	position: absolute;
-	height: 93.63%;
-	width: 73.62%;
-	top: 6.32%;
-	right: 12.25%;
-	bottom: 0.05%;
-	left: 14.14%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: cover;
+    position: absolute;
+    height: 93.63%;
+    width: 73.62%;
+    top: 6.32%;
+    right: 12.25%;
+    bottom: 0.05%;
+    left: 14.14%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
 }
 .useguide {
-	position: absolute;
-	height: 14.96%;
-	width: 29.47%;
-	top: 80.6%;
-	right: 38.62%;
-	bottom: 4.44%;
-	left: 31.91%;
+    position: absolute;
+    height: 162px;
+    width: 576px;
+    top: 77.41%;
+    right: 38.18%;
+    bottom: 7.63%;
+    left: 32.34%;
 }
 .start-box-icon {
-	position: absolute;
-	height: 92.3%;
-	width: 100%;
-	top: 0%;
-	right: 0%;
-	bottom: 7.7%;
-	left: 0%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: cover;
+    position: absolute;
+    height: 57%;
+    width: 100%;
+    top: 42.31%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
 }
 .start-text-icon {
-	position: absolute;
-	height: 93.96%;
-	width: 77.85%;
-	top: 5.99%;
-	right: 12.63%;
-	bottom: 0.05%;
-	left: 9.52%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: cover;
+    position: absolute;
+    height: 58.73%;
+    width: 77.85%;
+    top: 0%;
+    right: 13.6%;
+    bottom: 41.27%;
+    left: 8.56%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
 }
 .start {
-	position: absolute;
-	height: 13.95%;
-	width: 28%;
-	top: 28.15%;
-	right: 39.84%;
-	bottom: 57.89%;
-	left: 32.16%;
+    position: absolute;
+    height: 22.32%;
+    width: 28%;
+    top: 13.24%;
+    right: 38.2%;
+    bottom: 64.44%;
+    left: 33.8%;
 }
 .arrive-box-icon {
-	position: absolute;
-	height: 92.44%;
-	width: 100%;
-	top: 0%;
-	right: 0%;
-	bottom: 7.56%;
-	left: 0%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: cover;
+    position: absolute;
+    height: 57.49%;
+    width: 100%;
+    top: 42.51%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.arrive-text-icon {
+    position: absolute;
+    height: 58.44%;
+    width: 77.85%;
+    top: 0%;
+    right: 10.99%;
+    bottom: 41.56%;
+    left: 11.16%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
 }
 .arrive {
-	position: absolute;
-	height: 13.95%;
-	width: 28%;
-	top: 45.39%;
-	right: 39.84%;
-	bottom: 40.66%;
-	left: 32.16%;
+    position: absolute;
+    height: 237px;
+    width: 537px;
+    top: 35.56%;
+    right: 38.56%;
+    bottom: 42.01%;
+    left: 33.44%;
 }
 .result-box-icon {
-	position: absolute;
-	height: 98.35%;
-	width: 100%;
-	top: 0%;
-	right: 0%;
-	bottom: 1.65%;
-	left: 0%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
 }
 .result-text-icon {
-	position: absolute;
-	height: 94.02%;
-	width: 83.52%;
-	top: 5.99%;
-	right: 12.23%;
-	bottom: -0.01%;
-	left: 4.25%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: cover;
+    position: absolute;
+    height: 95.6%;
+    width: 83.52%;
+    top: 1.94%;
+    right: 14.48%;
+    bottom: 2.46%;
+    left: 2.01%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
 }
 .result {
-	position: absolute;
-	height: 14.56%;
-	width: 28.57%;
-	top: 63.54%;
-	right: 39.19%;
-	bottom: 21.91%;
-	left: 32.24%;
+    position: absolute;
+    height: 151px;
+    width: 28.57%;
+    top: 62.13%;
+    right: 28.62%;
+    bottom: 23.56%;
+    left: 32.81%;
 }
 .pic1-icon {
-	position: absolute;
-	height: 7.81%;
-	width: 2.29%;
-	top: 24.08%;
-	right: 67.85%;
-	bottom: 68.1%;
-	left: 29.87%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: cover;
+    position: absolute;
+    height: 8%;
+    width: 2.5%;
+    top: 25.52%;
+    right: 68.65%;
+    bottom: 68.67%;
+    left: 29.06%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
 }
 .pic2-icon {
-	position: absolute;
-	height: 7.27%;
-	width: 2.96%;
-	top: 40.48%;
-	right: 67.85%;
-	bottom: 52.25%;
-	left: 29.2%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: cover;
+    position: absolute;
+    height: 7.27%;
+    width: 2.96%;
+    top: 47.69%;
+    right: 68.66%;
+    bottom: 45.05%;
+    left: 28.39%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
 }
 .pic3-icon {
-	position: absolute;
-	height: 7.86%;
-	width: 3.15%;
-	top: 58.42%;
-	right: 67.85%;
-	bottom: 33.72%;
-	left: 29%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: cover;
+    position: absolute;
+    height: 7.86%;
+    width: 3.15%;
+    top: 65.37%;
+    right: 69.04%;
+    bottom: 26.77%;
+    left: 27.81%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
 }
 .pic-icon {
-	position: absolute;
-	height: 48.18%;
-	width: 5.11%;
-	top: 30.81%;
-	right: 34.09%;
-	bottom: 21.01%;
-	left: 60.8%;
-	max-width: 100%;
-	overflow: hidden;
-	max-height: 100%;
-	object-fit: contain;
+    position: absolute;
+    height: 48.18%;
+    width: 5.11%;
+    top: 30.81%;
+    right: 34.09%;
+    bottom: 21.01%;
+    left: 60.8%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: contain;
 }
 .home-icon {
-	position: absolute;
-	top: 37px;
-	left: 15px;
-	width: 572px;
-	height: 181px;
-	object-fit: cover;
+    position: absolute;
+    top: 47px;
+    left: 35px;
+    width: 572px;
+    height: 191px;
+    object-fit: cover;
 }
 .navi {
-	width: 100%;
-	position: relative;
-	background-color: #f6f0ea;
-	height: 1080px;
+    width: 100%;
+    position: relative;
+    background-color: #f6f0ea;
+    height: 1080px;
 }
 
