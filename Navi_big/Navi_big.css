@@ -2,10 +2,10 @@
 	position: absolute;
 	height: 8.89%;
 	width: 2.53%;
-	top: 17.96%;
-	right: 90.34%;
-	bottom: 73.15%;
-	left: 7.14%;
+	top: 19.91%;
+	right: 90.76%;
+	bottom: 71.2%;
+	left: 6.72%;
 	max-width: 100%;
 	overflow: hidden;
 	max-height: 100%;
@@ -15,9 +15,9 @@
 	position: absolute;
 	height: 8.7%;
 	width: 3.54%;
-	top: 62.78%;
+	top: 66.11%;
 	right: 90.37%;
-	bottom: 28.52%;
+	bottom: 25.19%;
 	left: 6.09%;
 	max-width: 100%;
 	overflow: hidden;
@@ -26,7 +26,7 @@
 }
 .stext-box-icon {
 	position: absolute;
-	height: 92%;
+	height: 100%;
 	width: 100%;
 	top: 0%;
 	right: 0%;
@@ -53,9 +53,9 @@
 }
 .stext {
 	position: absolute;
-	height: 17.85%;
-	width: 31.13%;
-	top: 2.04%;
+	height: 167px;
+	width: 545px;
+	top: 4%;
 	right: 1.32%;
 	bottom: 80.11%;
 	left: 67.55%;
@@ -75,11 +75,11 @@
 }
 .useguide-text-icon {
 	position: absolute;
-	height: 94.5%;
-	width: 73.5%;
+	height: 94.55%;
+	width: 73.51%;
 	top: 5.45%;
-	right: 12.49%;
-	bottom: 0.05%;
+	right: 12.48%;
+	bottom: -0.01%;
 	left: 14.01%;
 	max-width: 100%;
 	overflow: hidden;
@@ -88,17 +88,17 @@
 }
 .useguide {
 	position: absolute;
-	height: 17.83%;
-	width: 33.57%;
-	top: 79.72%;
-	right: 54.34%;
-	bottom: 2.44%;
-	left: 12.08%;
+	height: 18.36%;
+	width: 34.11%;
+	top: 80.94%;
+	right: 53.49%;
+	bottom: 0.7%;
+	left: 12.4%;
 }
 .start-box-icon {
 	position: absolute;
-	height: 52.08%;
-	width: 100%;
+	height: 180px;
+	width: 1920px;
 	top: 43.92%;
 	right: 0%;
 	bottom: 0%;
@@ -125,9 +125,9 @@
 .start {
 	position: absolute;
 	height: 29.94%;
-	width: 31.76%;
+	width: 33.28%;
 	top: 2.04%;
-	right: 55.02%;
+	right: 53.49%;
 	bottom: 68.03%;
 	left: 13.23%;
 }
@@ -135,10 +135,10 @@
 	position: absolute;
 	height: 9.17%;
 	width: 3.33%;
-	top: 43.52%;
-	right: 90.36%;
-	bottom: 47.31%;
-	left: 6.3%;
+	top: 42.22%;
+	right: 90.57%;
+	bottom: 48.61%;
+	left: 6.09%;
 	max-width: 100%;
 	overflow: hidden;
 	max-height: 100%;
@@ -146,7 +146,7 @@
 }
 .result-box-icon {
 	position: absolute;
-	height: 99.85%;
+	height: 95.85%;
 	width: 100%;
 	top: 0%;
 	right: 0%;
@@ -159,11 +159,11 @@
 }
 .result-text-icon {
 	position: absolute;
-	height: 94.48%;
-	width: 83.56%;
+	height: 94.46%;
+	width: 83.55%;
 	top: 5.52%;
-	right: 11.91%;
-	bottom: 0%;
+	right: 11.92%;
+	bottom: 0.02%;
 	left: 4.53%;
 	max-width: 100%;
 	overflow: hidden;
@@ -172,22 +172,22 @@
 }
 .result {
 	position: absolute;
-	height: 18.44%;
-	width: 34.06%;
-	top: 57.96%;
-	right: 53.39%;
-	bottom: 23.59%;
-	left: 12.55%;
+	height: 18.7%;
+	width: 33.59%;
+	top: 61.17%;
+	right: 53.49%;
+	bottom: 20.13%;
+	left: 12.92%;
 }
 .arrive-box-icon {
 	position: absolute;
-	height: 60%;
-	width: 100%;
+	height: 178px;
+	width: 1900px;
 	top: 40%;
 	right: 0%;
-	bottom: 0%;
+	bottom: 0.02%;
 	left: 0%;
-	border-radius: 63px;
+	border-radius: 63.89px;
 	max-width: 100%;
 	overflow: hidden;
 	max-height: 100%;
@@ -195,13 +195,13 @@
 }
 .arrive-text-icon {
 	position: absolute;
-	height: 62.59%;
-	width: 73.66%;
+	height: 62.58%;
+	width: 73.67%;
 	top: 0%;
-	right: 15.49%;
-	bottom: 37.41%;
+	right: 15.48%;
+	bottom: 37.42%;
 	left: 10.85%;
-	border-radius: 40px;
+	border-radius: 40.57px;
 	max-width: 100%;
 	overflow: hidden;
 	max-height: 100%;
@@ -209,12 +209,12 @@
 }
 .arrive {
 	position: absolute;
-	height: 26.85%;
-	width: 33.13%;
-	top: 29.35%;
-	right: 54.32%;
-	bottom: 43.8%;
-	left: 12.55%;
+	height: 30.33%;
+	width: 33.59%;
+	top: 27.84%;
+	right: 53.49%;
+	bottom: 41.82%;
+	left: 12.92%;
 }
 .map-icon {
 	position: absolute;
@@ -231,10 +231,10 @@
 }
 .home-icon {
 	position: absolute;
-	top: 43px;
+	top: 53px;
 	left: 23px;
 	width: 323px;
-	height: 141px;
+	height: 131px;
 	object-fit: cover;
 }
 .navi-big {
