@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="./Navi.css">
+    <title>길찾기 웹사이트</title>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bcc53eed27aaa7e2c02573fd301884d0"></script>
+    <style>
+        body.large-text {
+            font-size: 1.2em;
+        }
+        .controls {
+            margin: 20px;
+        }
+        .map-container {
+            width: 100%;
+            height: 400px;
+        }
+        .results-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/mnt/data/Group_626592.png" alt="에니로드 로고"> <!-- 로고 이미지 첨부 -->
+    </header>
+    <main>
+        <div class="controls">
+            <label for="start">출발지:</label>
+            <input type="text" id="start" name="start">
+            <label for="end">목적지:</label>
+            <input type="text" id="end" name="end">
+            <button onclick="findRoute()">결과 찾기</button>
+            <button onclick="toggleTextSize()">글씨 크기 확대/축소</button>
+            <button onclick="location.href='guide.html'">사용 방법</button>
+        </div>
+        <div id="map" class="map-container"></div>
+        <div class="results-container">
+            <div id="subway-result">지하철 경로</div>
+            <div id="car-result">자가용 경로</div>
+            <div id="bus-result">버스 경로</div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 에니로드
+    </footer>
+    <script>
+        var map;
+
+        function initMap() {
+            var mapContainer = document.getElementById('map'),
+                mapOption = {
+                    center: new kakao.maps.LatLng(37.566826, 126.9786567), // 서울 중심 좌표
+                    level: 3 // 지도의 확대 레벨
+                };
+
+            map = new kakao.maps.Map(mapContainer, mapOption);
+            map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+        }
+
+        function toggleTextSize() {
+            document.body.classList.toggle('large-text');
+        }
+
+        function findRoute() {
+            var start = document.getElementById('start').value;
+            var end = document.getElementById('end').value;
+
+            // 여기에 실제 경로 검색 API를 호출하는 로직을 추가해야 합니다.
+            var apiUrl = `https://api.kakaomap.com/v2/directions?origin=${start}&destination=${end}`;
+
+            fetch(apiUrl)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    displayResults(data);
+                })
+                .catch(function (error) {
+                    console.error('Error:', error);
+                });
+        }
+
+        function displayResults(data) {
+            var subwayResult = '지하철 경로: ' + (data.subway || '정보 없음');
+            var carResult = '자가용 경로: ' + (data.car || '정보 없음');
+            var busResult = '버스 경로: ' + (data.bus || '정보 없음');
+
+            document.getElementById('subway-result').innerText = subwayResult;
+            document.getElementById('car-result').innerText = carResult;
+            document.getElementById('bus-result').innerText = busResult;
+        }
+
+        window.onload = function () {
+            initMap();
+        }
+    </script>
+</body>
+</html>

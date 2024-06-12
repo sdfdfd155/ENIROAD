@@ -1,0 +1,254 @@
+.f5-icon {
+	position: absolute;
+	height: 221.4px;
+	width: 285.696px;
+	top: 486.54px;
+	right: 1429.824px;
+	bottom: 387.936px;
+	left: 205.44px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.map-icon {
+	position: absolute;
+	height: 544.968px;
+	width: 531.648px;
+	top: 383.048px;
+	right: 98.496px;
+	bottom: 150.984px;
+	left: 1290.096px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.btext-box-icon {
+	position: absolute;
+	height: 1063.8px;
+	width: 1920px;
+	top: 0px;
+	right: 0px;
+	bottom: 16.2px;
+	left: 0px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.btext-text-icon {
+	position: absolute;
+	height: 1012.284px;
+	width: 1404.432px;
+	top: 67.368px;
+	right: 242.88px;
+	bottom: 0.108px;
+	left: 271.776px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.btext {
+	position: absolute;
+	height: 153.372px;
+	width: 534.144px;
+	top: 142.776px;
+	right: 96px;
+	bottom: 783.288px;
+	left: 1290.816px;
+}
+.useguide-box-icon {
+	position: absolute;
+	height: 1067.256px;
+	width: 1920px;
+	top: 0px;
+	right: 0px;
+	bottom: 12.744px;
+	left: 0px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.useguide-text-icon {
+	position: absolute;
+	height: 1011.204px;
+	width: 1414.464px;
+	top: 68.256px;
+	right: 235.2px;
+	bottom: 0.54px;
+	left: 271.776px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.useguide {
+	position: absolute;
+	height: 161.568px;
+	width: 565.824px;
+	top: 870.48px;
+	right: 741.504px;
+	bottom: 47.952px;
+	left: 613.632px;
+}
+.start-box-icon {
+	position: absolute;
+	height: 997.44px;
+	width: 1920px;
+	top: 0px;
+	right: 0px;
+	bottom: 82.56px;
+	left: 0px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.start-text-icon {
+	position: absolute;
+	height: 1015.776px;
+	width: 1495.92px;
+	top: 64.692px;
+	right: 242.496px;
+	bottom: 0.54px;
+	left: 182.88px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.start {
+	position: absolute;
+	height: 150.66px;
+	width: 537.6px;
+	top: 304.02px;
+	right: 764.928px;
+	bottom: 625.02px;
+	left: 617.472px;
+}
+.arrive-box-icon {
+	position: absolute;
+	height: 997.632px;
+	width: 1920px;
+	top: 0px;
+	right: 0px;
+	bottom: 82.368px;
+	left: 0px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.arrive {
+	position: absolute;
+	height: 150.66px;
+	width: 537.6px;
+	top: 490.212px;
+	right: 764.928px;
+	bottom: 438.828px;
+	left: 617.472px;
+}
+.result-box-icon {
+	position: absolute;
+	height: 1060.2px;
+	width: 1920px;
+	top: 0px;
+	right: 0px;
+	bottom: 19.8px;
+	left: 0px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.result-text-icon {
+	position: absolute;
+	height: 1015.416px;
+	width: 1604.544px;
+	top: 64.692px;
+	right: 234.816px;
+	bottom: -0.108px;
+	left: 81.36px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.result {
+	position: absolute;
+	height: 157.248px;
+	width: 548.544px;
+	top: 686.232px;
+	right: 752.064px;
+	bottom: 236.52px;
+	left: 619.392px;
+}
+.pic1-icon {
+	position: absolute;
+	height: 84.348px;
+	width: 43.968px;
+	top: 260.064px;
+	right: 1303.92px;
+	bottom: 735.588px;
+	left: 574.08px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.pic2-icon {
+	position: absolute;
+	height: 78.516px;
+	width: 56.832px;
+	top: 437.184px;
+	right: 1303.92px;
+	bottom: 564.3px;
+	left: 561.6px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.pic3-icon {
+	position: absolute;
+	height: 84.888px;
+	width: 60.48px;
+	top: 629.136px;
+	right: 1303.92px;
+	bottom: 366.048px;
+	left: 556.8px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.pic-icon {
+	position: absolute;
+	height: 520.344px;
+	width: 98.112px;
+	top: 332.748px;
+	right: 654.528px;
+	bottom: 226.908px;
+	left: 1167.36px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: contain;
+}
+.home-icon {
+	position: absolute;
+	top: 37px;
+	left: 15px;
+	width: 572px;
+	height: 181px;
+	object-fit: cover;
+}
+.navi {
+	width: 100%;
+	position: relative;
+	background-color: #f6f0ea;
+	height: 1080px;
+}
