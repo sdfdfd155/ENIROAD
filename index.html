@@ -1,125 +1,57 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>에니로드 - 길안내 경로</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f0f0f0;
-        }
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
 
-        header {
-            background-color: #0080FF;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-        }
-
-        header img {
-            height: 50px;
-        }
-
-        main {
-            padding: 20px;
-            background-color: #fff;
-            margin: 20px auto;
-            max-width: 800px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .controls {
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .controls label {
-            margin-right: 10px;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .controls input {
-            margin-right: 10px;
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .controls button {
-            padding: 10px 20px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            cursor: pointer;
-            background-color: #0080FF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .map-container {
-            width: 100%;
-            height: 500px;
-            margin-bottom: 20px;
-        }
-
-        .results-container {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .results-container div {
-            width: 32%;
-            background-color: #f9f9f9;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .large-text {
-            font-size: 24px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #0080FF;
-            color: white;
-        }
-    </style>
-    <script type="text/javascript"
-        src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=c6dcc0c6916ba71802e3393158bab1bd&libraries=services"></script>
+    <link rel="stylesheet" href="./Navi.css" />
 </head>
+<script type="text/javascript"
+    src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=c6dcc0c6916ba71802e3393158bab1bd&libraries=services"></script>
 
 <body>
-    <header>
-        <img src="/mnt/data/Group_626592.png" alt="에니로드 로고">
-    </header>
-    <main>
-        <div class="controls">
-            <label for="start">출발지:</label>
-            <input type="text" id="start" name="start">
-            <label for="end">목적지:</label>
-            <input type="text" id="end" name="end">
-            <button id="routeButton" onclick="openRoute()">경로 보기</button>
-            <button onclick="toggleTextSize()">글씨 크기 확대/축소</button>
-            <button onclick="location.href='guide.html'">사용 방법</button>
+    <div class="navi">
+        <img class="f5-icon" alt="" src="f5.png">
+
+        <div id="map" style="height:550px; top: 400px; left: 1300px; width: 550px;"></div>
+
+        <div class="btext">
+            <img class="btext-box-icon" alt="" src="btext_box.png">
+            <img class="btext-text-icon" alt="" src="btext_text.png">
         </div>
-        <div id="map" class="map-container"></div>
-    </main>
-    <footer>
-        &copy; 2024 에니로드
-    </footer>
+
+        <div class="useguide">
+            <img class="useguide-box-icon" alt="" src="useguide_box.png">
+            <img class="useguide-text-icon" alt="" src="useguide_text.png">
+        </div>
+
+        <div class="start">
+            <img class="start-box-icon" alt="" src="start_box.png">
+            <input type="text" id="start" placeholder="출발지 입력"
+                style="position: absolute; top: 50px; left: 50px; width: 350px; height: 30px;">
+        </div>
+
+        <div class="arrive">
+            <img class="arrive-box-icon" alt="" src="arrive_box.png">
+            <input type="text" id="end" placeholder="목적지 입력"
+                style="position: absolute; top: 50px; left: 50px; width: 350px; height: 30px;">
+        </div>
+
+        <div class="result">
+            <button id="routeButton" onclick="openRoute()">
+                <img class="result-box-icon" alt="경로 찾기" src="result_box.png">
+                <img class="result-text-icon" alt="경로 찾기" src="result_text.png">
+            </button>
+        </div>
+
+        <img class="pic1-icon" alt="" src="pic1.png">
+        <img class="pic2-icon" alt="" src="pic2.png">
+        <img class="pic3-icon" alt="" src="pic3.png">
+        <img class="pic-icon" alt="" src="pic.png">
+        <img class="home-icon" alt="" src="home.png">
+    </div>
+
     <script>
         var mapContainer = document.getElementById('map'),
             mapOption = {
@@ -129,24 +61,17 @@
 
         var map = new kakao.maps.Map(mapContainer, mapOption);
 
-        // HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
         if (navigator.geolocation) {
-
-            // GeoLocation을 이용해서 접속 위치를 얻어옵니다
             navigator.geolocation.getCurrentPosition(function (position) {
+                var lat = position.coords.latitude,
+                    lon = position.coords.longitude;
 
-                var lat = position.coords.latitude, // 위도
-                    lon = position.coords.longitude; // 경도
-
-                var locPosition = new kakao.maps.LatLng(lat, lon) // geolocation으로 얻어온 좌표
+                var locPosition = new kakao.maps.LatLng(lat, lon);
                 presentPosition = locPosition;
 
                 map.setCenter(locPosition);
-
             });
-
-        } else { // HTML5의 GeoLocation을 사용할 수 없을때 
-
+        } else {
             var locPosition = new kakao.maps.LatLng(37.566826, 126.9786567)
             alert('현재 위치를 찾을 수 없습니다!');
         }
