@@ -1,0 +1,144 @@
+.home-icon {
+	position: absolute;
+	top: 11px;
+	left: 0px;
+	width: 516px;
+	height: 215px;
+	object-fit: cover;
+}
+.stext-box-icon {
+	position: absolute;
+	height: 93.55%;
+	width: 100%;
+	top: 0%;
+	right: 0%;
+	bottom: 6.45%;
+	left: 0%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.stext-text-icon {
+	position: absolute;
+	height: 98.27%;
+	width: 90.63%;
+	top: 1.77%;
+	right: 5.08%;
+	bottom: -0.04%;
+	left: 4.3%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.stext {
+	position: absolute;
+	height: 10%;
+	width: 18%;
+	top: 4.81%;
+	right: 2.31%;
+	bottom: 79.1%;
+	left: 69.79%;
+}
+.insert-start-box-icon {
+	position: absolute;
+	top: 226px;
+	left: 52px;
+	width: 629.3px;
+	height: 225px;
+	object-fit: cover;
+}
+.insert-start-text-icon {
+	position: absolute;
+	top: 240px;
+	left: 675px;
+	width: 1112.2px;
+	height: 283px;
+	object-fit: cover;
+}
+.insert-arrive-box-icon {
+	position: absolute;
+	top: 451px;
+	left: 56px;
+	width: 618.7px;
+	height: 251px;
+	object-fit: cover;
+}
+.home-bb-icon {
+	position: absolute;
+	height: 31.89%;
+	width: 15.06%;
+	top: 25.15%;
+	right: 75.44%;
+	bottom: 42.96%;
+	left: 9.5%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.home-sb-icon {
+	position: absolute;
+	height: 15.73%;
+	width: 7.71%;
+	top: 33.26%;
+	right: 92.29%;
+	bottom: 51.02%;
+	left: 0%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.next-icon {
+	position: absolute;
+	height: 100%;
+	width: 83.06%;
+	top: 0%;
+	right: -0.03%;
+	bottom: 0%;
+	left: 16.97%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.home-bb-parent {
+	position: absolute;
+	height: 21.31%;
+	width: 16.08%;
+	top: 70.83%;
+	right: 27.83%;
+	bottom: 7.85%;
+	left: 56.09%;
+}
+.insert-arrive-text-icon {
+	position: absolute;
+	height: 23.24%;
+	width: 55.83%;
+	top: 46.67%;
+	right: 7.97%;
+	bottom: 30.09%;
+	left: 36.2%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.pic-icon {
+	position: absolute;
+	top: 754px;
+	left: 557px;
+	width: 226.9px;
+	height: 251px;
+	object-fit: cover;
+}
+.guide-big {
+	width: 100%;
+	position: relative;
+	background-color: #f6f0ea;
+	height: 1080px;
+	overflow: hidden;
+}
+
