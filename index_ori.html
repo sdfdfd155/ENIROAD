@@ -16,7 +16,7 @@
         }
 
         header {
-            background-color: #6a0dad;
+            background-color: #0080FF;
             padding: 20px;
             text-align: center;
             position: relative;
@@ -59,7 +59,7 @@
             margin-right: 10px;
             margin-bottom: 10px;
             cursor: pointer;
-            background-color: #6a0dad;
+            background-color: #0080FF;
             color: white;
             border: none;
             border-radius: 5px;
@@ -93,16 +93,17 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #6a0dad;
+            background-color: #0080FF;
             color: white;
         }
     </style>
-    <script type="text/javascript" src="map.js"></script>
+    <script type="text/javascript"
+        src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=c6dcc0c6916ba71802e3393158bab1bd&libraries=services"></script>
 </head>
 
 <body>
     <header>
-        <img src="/mnt/data/Group_626592.png" alt="에니로드 로고"> #로고 이미지 첨부?
+        <img src="/mnt/data/Group_626592.png" alt="에니로드 로고">
     </header>
     <main>
         <div class="controls">
@@ -110,78 +111,97 @@
             <input type="text" id="start" name="start">
             <label for="end">목적지:</label>
             <input type="text" id="end" name="end">
-            <button onclick="findRoute()">결과 찾기</button>
+            <button id="routeButton" onclick="openRoute()">경로 보기</button>
             <button onclick="toggleTextSize()">글씨 크기 확대/축소</button>
             <button onclick="location.href='guide.html'">사용 방법</button>
         </div>
         <div id="map" class="map-container"></div>
-        <div class="results-container">
-            <div id="subway-result">지하철 경로</div>
-            <div id="car-result">자가용 경로</div>
-            <div id="bus-result">버스 경로</div>
-        </div>
     </main>
     <footer>
         &copy; 2024 에니로드
     </footer>
     <script>
-        #지도
         var mapContainer = document.getElementById('map'),
             mapOption = {
-                center: new kakao.maps.LatLng(37.566826, 126.9786567), // 서울 중심 좌표에요
-                level: 3 // 지도의 확대 레벨
+                center: new kakao.maps.LatLng(37.566826, 126.9786567),
+                level: 3
             };
 
-        #지도 생성
-        var map = new kakao.maps.Map(mapContainer, mapOption); 
+        var map = new kakao.maps.Map(mapContainer, mapOption);
 
-       # 지도 교통정보 ? 어렵네요
-        map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+        // HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
+        if (navigator.geolocation) {
 
-        #확대 / 축소
-        function toggleTextSize() {
-            document.body.classList.toggle('large-text');
+            // GeoLocation을 이용해서 접속 위치를 얻어옵니다
+            navigator.geolocation.getCurrentPosition(function (position) {
+
+                var lat = position.coords.latitude, // 위도
+                    lon = position.coords.longitude; // 경도
+
+                var locPosition = new kakao.maps.LatLng(lat, lon) // geolocation으로 얻어온 좌표
+                presentPosition = locPosition;
+
+                map.setCenter(locPosition);
+
+            });
+
+        } else { // HTML5의 GeoLocation을 사용할 수 없을때 
+
+            var locPosition = new kakao.maps.LatLng(37.566826, 126.9786567)
+            alert('현재 위치를 찾을 수 없습니다!');
         }
 
-        #경로 검색..
-        function findRoute() {
+        var geocoder = new kakao.maps.services.Geocoder();
+        var marker = new kakao.maps.Marker();
+        var infowindow = new kakao.maps.InfoWindow({ zindex: 1 });
+        var startAddr = "";
+        var endAddr = "";
+
+        kakao.maps.event.addListener(map, 'click', function (mouseEvent) {
+            searchDetailAddrFromCoords(mouseEvent.latLng, function (result, status) {
+                if (status === kakao.maps.services.Status.OK) {
+                    var detailAddr = !!result[0].road_address ? result[0].road_address.address_name : result[0].address.address_name;
+                    if (!startAddr) {
+                        startAddr = detailAddr;
+                        document.getElementById('start').value = startAddr;
+                    } else if (!endAddr) {
+                        endAddr = detailAddr;
+                        document.getElementById('end').value = endAddr;
+                    } else {
+                        alert("이미 출발지와 목적지가 설정되었습니다.");
+                    }
+
+                    var content = '<div class="bAddr">' +
+                        '<span class="title">법정동 주소정보</span>' +
+                        '<div>' + detailAddr + '</div>' +
+                        '</div>';
+
+                    marker.setPosition(mouseEvent.latLng);
+                    marker.setMap(map);
+                    infowindow.setContent(content);
+                    infowindow.open(map, marker);
+                }
+            });
+        });
+
+        function searchDetailAddrFromCoords(coords, callback) {
+            geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
+        }
+
+        function openRoute() {
             var start = document.getElementById('start').value;
             var end = document.getElementById('end').value;
 
-            #경로
-            var apiUrl = `https://api.kakaomap.com/v2/directions?origin=${start}&destination=${end}`;
-
-            fetch(apiUrl)
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (data) {
-
-                    displayResults(data);
-                })
-                .catch(function (error) {
-                    console.error('Error:', error);
-                });
+            if (start && end) {
+                var routeLink = `https://map.kakao.com/?sName=${encodeURIComponent(start)}&eName=${encodeURIComponent(end)}`;
+                window.open(routeLink, '_blank');
+            } else {
+                alert("출발지와 목적지를 입력하거나 설정해주세요.");
+            }
         }
 
-        #경로 결과표시 함수
-        function displayResults(data) {
-            var subwayResult = '지하철 경로: ' + data.subway;
-            var carResult = '자가용 경로: ' + data.car;
-            var busResult = '버스 경로: ' + data.bus;
-
-            document.getElementById('subway-result').innerText = subwayResult;
-            document.getElementById('car-result').innerText = carResult;
-            document.getElementById('bus-result').innerText = busResult;
-        }
-
-        #페이지 로드 시 지도초기화
-        window.onload = function () {
-            initMap();
-        }
-
-        #지도 초기화
-        function initMap() {
+        function toggleTextSize() {
+            document.body.classList.toggle('large-text');
         }
     </script>
 </body>
