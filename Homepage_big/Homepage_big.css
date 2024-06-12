@@ -1,3 +1,33 @@
+.tosmall-box-icon {
+	position: absolute;
+	height: 93.58%;
+	width: 100%;
+	top: 0%;
+	right: 0%;
+	bottom: 4.42%;
+	left: 0%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.tosmall-text-icon {
+	position: absolute;
+	top: 9px;
+	left: 79px;
+	width: 512px;
+	height: 197px;
+	object-fit: cover;
+}
+.tosmall {
+	position: absolute;
+	height: 19.07%;
+	width: 36.46%;
+	top: 4.07%;
+	right: 12.19%;
+	bottom: 76.85%;
+	left: 51.35%;
+}
 .home-icon {
 	position: absolute;
 	top: 20px;
@@ -8,8 +38,8 @@
 }
 .pic-icon {
 	position: absolute;
-	top: 345px;
-	left: 276px;
+	top: 475px;
+	left: 55px;
 	width: 714px;
 	height: 527px;
 	object-fit: cover;
@@ -32,54 +62,29 @@
 }
 .navi {
 	position: absolute;
-	top: 764px;
-	left: 1225px;
+	top: 631px;
+	left: 1092px;
 	width: 468px;
 	height: 216.1px;
 }
-.tosmall-box-icon {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 725.7px;
-	height: 199.5px;
-	object-fit: cover;
-}
-.tosmall-text-icon {
-	position: absolute;
-	top: 30px;
-	left: 75px;
-	width: 588px;
-	height: 160px;
-	object-fit: cover;
-}
-.tosmall {
-	position: absolute;
-	top: 68px;
-	left: 1150px;
-	width: 699.7px;
-	height: 199.5px;
-}
 .useguide-box-icon {
 	position: absolute;
-	height: 110%;
-	width: 100%;
-	top: 0%;
+	height: 220px;
+	width: 724px;
+	top: -10%;
 	right: 0%;
-	bottom: 0%;
+	bottom: 20%;
 	left: 0%;
-	max-width: 110%;
 	overflow: hidden;
-	max-height: 100%;
 	object-fit: cover;
 }
 .useguide-text-icon {
 	position: absolute;
-	height: 95.33%;
+	height: 91.7%;
 	width: 71.67%;
-	top: 4.57%;
+	top: 8.3%;
 	right: 15.61%;
-	bottom: 0.1%;
+	bottom: 0%;
 	left: 12.71%;
 	max-width: 100%;
 	overflow: hidden;
@@ -88,12 +93,12 @@
 }
 .useguide {
 	position: absolute;
-	height: 18.23%;
+	height: 18.95%;
 	width: 36.46%;
-	top: 47.69%;
-	right: 4.38%;
-	bottom: 34.08%;
-	left: 59.17%;
+	top: 30.28%;
+	right: 12.71%;
+	bottom: 50.77%;
+	left: 50.83%;
 }
 .homepage-big {
 	width: 100%;
