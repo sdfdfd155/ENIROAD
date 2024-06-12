@@ -1,0 +1,104 @@
+.home-icon {
+	position: absolute;
+	top: 20px;
+	left: 60px;
+	width: 705px;
+	height: 426px;
+	object-fit: cover;
+}
+.pic-icon {
+	position: absolute;
+	top: 345px;
+	left: 276px;
+	width: 714px;
+	height: 527px;
+	object-fit: cover;
+}
+.navi-bigbox-icon {
+	position: absolute;
+	top: 11.58px;
+	left: 0px;
+	width: 468px;
+	height: 204.4px;
+	object-fit: cover;
+}
+.navi-bigtext-icon {
+	position: absolute;
+	top: 0px;
+	left: 72px;
+	width: 253.9px;
+	height: 216.1px;
+	object-fit: cover;
+}
+.navi {
+	position: absolute;
+	top: 764px;
+	left: 1225px;
+	width: 468px;
+	height: 216.1px;
+}
+.tosmall-box-icon {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 725.7px;
+	height: 199.5px;
+	object-fit: cover;
+}
+.tosmall-text-icon {
+	position: absolute;
+	top: 30px;
+	left: 75px;
+	width: 588px;
+	height: 160px;
+	object-fit: cover;
+}
+.tosmall {
+	position: absolute;
+	top: 68px;
+	left: 1150px;
+	width: 699.7px;
+	height: 199.5px;
+}
+.useguide-box-icon {
+	position: absolute;
+	height: 110%;
+	width: 100%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	left: 0%;
+	max-width: 110%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.useguide-text-icon {
+	position: absolute;
+	height: 95.33%;
+	width: 71.67%;
+	top: 4.57%;
+	right: 15.61%;
+	bottom: 0.1%;
+	left: 12.71%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.useguide {
+	position: absolute;
+	height: 18.23%;
+	width: 36.46%;
+	top: 47.69%;
+	right: 4.38%;
+	bottom: 34.08%;
+	left: 59.17%;
+}
+.homepage-big {
+	width: 100%;
+	position: relative;
+	background-color: #f6f0ea;
+	height: 1080px;
+}
+

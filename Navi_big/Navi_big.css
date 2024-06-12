@@ -1,0 +1,247 @@
+.pic-1-icon {
+	position: absolute;
+	height: 8.89%;
+	width: 2.53%;
+	top: 17.96%;
+	right: 90.34%;
+	bottom: 73.15%;
+	left: 7.14%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.pic-3-icon {
+	position: absolute;
+	height: 8.7%;
+	width: 3.54%;
+	top: 62.78%;
+	right: 90.37%;
+	bottom: 28.52%;
+	left: 6.09%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.stext-box-icon {
+	position: absolute;
+	height: 92%;
+	width: 100%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	left: 0%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.stext-text-icon {
+	position: absolute;
+	height: 83.09%;
+	width: 71.05%;
+	top: 10.89%;
+	right: 14.39%;
+	bottom: 6.02%;
+	left: 14.56%;
+	border-radius: 80.09px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.stext {
+	position: absolute;
+	height: 17.85%;
+	width: 31.13%;
+	top: 2.04%;
+	right: 1.32%;
+	bottom: 80.11%;
+	left: 67.55%;
+}
+.useguide-box-icon {
+	position: absolute;
+	height: 98.18%;
+	width: 100%;
+	top: 0%;
+	right: 0%;
+	bottom: 1.82%;
+	left: 0%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.useguide-text-icon {
+	position: absolute;
+	height: 94.5%;
+	width: 73.5%;
+	top: 5.45%;
+	right: 12.49%;
+	bottom: 0.05%;
+	left: 14.01%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.useguide {
+	position: absolute;
+	height: 17.83%;
+	width: 33.57%;
+	top: 79.72%;
+	right: 54.34%;
+	bottom: 2.44%;
+	left: 12.08%;
+}
+.start-box-icon {
+	position: absolute;
+	height: 52.08%;
+	width: 100%;
+	top: 43.92%;
+	right: 0%;
+	bottom: 0%;
+	left: 0%;
+	border-radius: 55px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.start-text-icon {
+	position: absolute;
+	height: 57.1%;
+	width: 77.89%;
+	top: 0%;
+	right: 12.27%;
+	bottom: 42.9%;
+	left: 9.84%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.start {
+	position: absolute;
+	height: 29.94%;
+	width: 31.76%;
+	top: 2.04%;
+	right: 55.02%;
+	bottom: 68.03%;
+	left: 13.23%;
+}
+.pic-2-icon {
+	position: absolute;
+	height: 9.17%;
+	width: 3.33%;
+	top: 43.52%;
+	right: 90.36%;
+	bottom: 47.31%;
+	left: 6.3%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.result-box-icon {
+	position: absolute;
+	height: 99.85%;
+	width: 100%;
+	top: 0%;
+	right: 0%;
+	bottom: 0.15%;
+	left: 0%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.result-text-icon {
+	position: absolute;
+	height: 94.48%;
+	width: 83.56%;
+	top: 5.52%;
+	right: 11.91%;
+	bottom: 0%;
+	left: 4.53%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.result {
+	position: absolute;
+	height: 18.44%;
+	width: 34.06%;
+	top: 57.96%;
+	right: 53.39%;
+	bottom: 23.59%;
+	left: 12.55%;
+}
+.arrive-box-icon {
+	position: absolute;
+	height: 60%;
+	width: 100%;
+	top: 40%;
+	right: 0%;
+	bottom: 0%;
+	left: 0%;
+	border-radius: 63px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.arrive-text-icon {
+	position: absolute;
+	height: 62.59%;
+	width: 73.66%;
+	top: 0%;
+	right: 15.49%;
+	bottom: 37.41%;
+	left: 10.85%;
+	border-radius: 40px;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.arrive {
+	position: absolute;
+	height: 26.85%;
+	width: 33.13%;
+	top: 29.35%;
+	right: 54.32%;
+	bottom: 43.8%;
+	left: 12.55%;
+}
+.map-icon {
+	position: absolute;
+	height: 77.69%;
+	width: 46.15%;
+	top: 19.91%;
+	right: 0.83%;
+	bottom: 2.41%;
+	left: 53.02%;
+	max-width: 100%;
+	overflow: hidden;
+	max-height: 100%;
+	object-fit: cover;
+}
+.home-icon {
+	position: absolute;
+	top: 43px;
+	left: 23px;
+	width: 323px;
+	height: 141px;
+	object-fit: cover;
+}
+.navi-big {
+	width: 100%;
+	position: relative;
+	background-color: #f6f0ea;
+	height: 1080px;
+	overflow: hidden;
+}
+

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width">
+
+	<link rel="stylesheet" href="./Navi_big.css" />
+
+</head>
+<script type="text/javascript"
+	src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=c6dcc0c6916ba71802e3393158bab1bd&libraries=services"></script>
+
+<body>
+
+	<div class="navi-big">
+		<img class="pic-1-icon" alt="" src="pic_1.png">
+
+		<img class="pic-3-icon" alt="" src="pic_3.png">
+
+		<a href="../Navi/Navi.html" class="stext">
+			<img class="stext-box-icon" alt="" src="stext_box.png">
+
+			<img class="stext-text-icon" alt="" src="stext_text.png">
+		</a>
+
+		<a href="../guide_big/guide_big.html" class="useguide">
+
+			<img class="useguide-box-icon" alt="" src="useguide_box.png">
+
+			<img class="useguide-text-icon" alt="" src="useguide_text.png">
+
+		</a>
+
+		<div class="start">
+			<img class="start-text-icon" alt="" src="start_text.png">
+			<img class="start-box-icon" alt="" src="start_box.png">
+			<input type="text" id="start" placeholder="출발지 입력"
+				style="position: absolute; top: 190px; left: 50px; width: 350px; height: 50px;">
+		</div>
+
+		<img class="pic-2-icon" alt="" src="pic_2.png">
+
+		<div class="result">
+			<button id="routeButton" onclick="openRoute()">
+				<img class="result-box-icon" alt="경로 찾기" src="result_box.png">
+				<img class="result-text-icon" alt="경로 찾기" src="result_text.png">
+			</button>
+		</div>
+
+		<div class="arrive">
+			<img class="start-text-icon" alt="" src="arrive_text.png">
+			<img class="arrive-box-icon" alt="" src="arrive_box.png">
+			<input type="text" id="end" placeholder="목적지 입력"
+				style="position: absolute; top: 190px; left: 50px; width: 350px; height: 50px;">
+		</div>
+
+		<a href="../Homepage_big/Homepage_big.html" class="home">
+			<img class="home-icon" alt="" src="home.png">
+		</a>
+
+
+	</div>
+
+	<script>
+		var mapContainer = document.getElementById('map'),
+			mapOption = {
+				center: new kakao.maps.LatLng(37.566826, 126.9786567),
+				level: 3
+			};
+
+		var map = new kakao.maps.Map(mapContainer, mapOption);
+
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(function (position) {
+				var lat = position.coords.latitude,
+					lon = position.coords.longitude;
+
+				var locPosition = new kakao.maps.LatLng(lat, lon);
+				presentPosition = locPosition;
+
+				map.setCenter(locPosition);
+			});
+		} else {
+			var locPosition = new kakao.maps.LatLng(37.566826, 126.9786567)
+			alert('현재 위치를 찾을 수 없습니다!');
+		}
+
+		var geocoder = new kakao.maps.services.Geocoder();
+		var marker = new kakao.maps.Marker();
+		var infowindow = new kakao.maps.InfoWindow({ zindex: 1 });
+		var startAddr = "";
+		var endAddr = "";
+
+		kakao.maps.event.addListener(map, 'click', function (mouseEvent) {
+			searchDetailAddrFromCoords(mouseEvent.latLng, function (result, status) {
+				if (status === kakao.maps.services.Status.OK) {
+					var detailAddr = !!result[0].road_address ? result[0].road_address.address_name : result[0].address.address_name;
+					if (!startAddr) {
+						startAddr = detailAddr;
+						document.getElementById('start').value = startAddr;
+					} else if (!endAddr) {
+						endAddr = detailAddr;
+						document.getElementById('end').value = endAddr;
+					} else {
+						alert("이미 출발지와 목적지가 설정되었습니다.");
+					}
+
+					var content = '<div class="bAddr">' +
+						'<span class="title">법정동 주소정보</span>' +
+						'<div>' + detailAddr + '</div>' +
+						'</div>';
+
+					marker.setPosition(mouseEvent.latLng);
+					marker.setMap(map);
+					infowindow.setContent(content);
+					infowindow.open(map, marker);
+				}
+			});
+		});
+
+		function searchDetailAddrFromCoords(coords, callback) {
+			geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
+		}
+
+		function openRoute() {
+			var start = document.getElementById('start').value;
+			var end = document.getElementById('end').value;
+
+			if (start && end) {
+				var routeLink = `https://map.kakao.com/?sName=${encodeURIComponent(start)}&eName=${encodeURIComponent(end)}`;
+				window.open(routeLink, '_blank');
+			} else {
+				alert("출발지와 목적지를 입력하거나 설정해주세요.");
+			}
+		}
+
+		function toggleTextSize() {
+			document.body.classList.toggle('large-text');
+		}
+	</script>
+
+</body>
+
+</html>
